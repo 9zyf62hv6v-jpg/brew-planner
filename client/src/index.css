@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brew-orange: #FF6B00;
+  --color-brew-navy: #1F2937;
+  --color-brew-bg: #F3F4F6;
+  --color-brew-sidebar: #FFFFFF;
+  --color-brew-green: #4CAF50;
+  --color-brew-blue: #2196F3;
+  --color-brew-red: #E91E63;
+  --color-brew-yellow: #FF9800;
+  --color-brew-dark: #607D8B;
+  --color-brew-border: #E5E7EB;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ===== Тёмная тема ===== */
+html.dark {
+  --color-brew-navy: #E5E7EB;
+  --color-brew-bg: #0F172A;
+  --color-brew-sidebar: #1E293B;
+  --color-brew-border: #334155;
+  --color-white: #1E293B;
+  --color-gray-50: #0F172A;
+  --color-gray-100: #334155;
+  --color-gray-200: #475569;
+  --color-gray-400: #94A3B8;
+  --color-gray-500: #94A3B8;
+  --color-gray-600: #CBD5E1;
+  --color-gray-700: #E2E8F0;
+  --color-gray-900: #F1F5F9;
+  --color-red-50: #3F1D1D;
+  --color-red-200: #7F1D1D;
+  --color-red-300: #991B1B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-brew-bg);
+  color: var(--color-brew-navy);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brew-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748B;
+}
+/* Отступ для iPhone с home-индикатором внизу */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

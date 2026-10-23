@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Запрещаем роботам индексировать API и админку
+Disallow: /api/
+Disallow: /profile
+Disallow: /settings
+
+Sitemap: https://my-brew.ru/sitemap.xml
+Host: https://my-brew.ru

@@ -1,0 +1,1 @@
+UPDATE users SET name = 'Иван Пивоваров' WHERE email = 'test@brew.ru';
